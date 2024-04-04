@@ -8,6 +8,7 @@ body {
 }
 
 .testimonial-container {
+  position: relative;
   width: 500px;
   height: 100px;
   background-color: slateblue;
@@ -17,7 +18,6 @@ body {
   padding: 70px 20px;
   margin: 5px;
   color: white;
-  position: relative;
 }
 
 img {
@@ -33,4 +33,24 @@ img {
 .username {
   font-size: 13px;
   font-weight: 100;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 70px;
+}
+
+.arrow.prev {
+  left: 10px;
+}
+
+.arrow.next {
+  right: 10px;
 }

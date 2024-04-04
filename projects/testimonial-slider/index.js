@@ -32,11 +32,20 @@ function updateTestimonial() {
   imgEl.src = photoUrl;
   textEl.innerText = text;
   usernameEl.innerText = name;
+}
+
+function nextTestimonial() {
   idx++;
-  if (idx === testimonials.length) {
+  if (idx >= testimonials.length) {
     idx = 0;
   }
-  setTimeout(() => {
-    updateTestimonial();
-  }, 10000);
+  updateTestimonial();
+}
+
+function prevTestimonial() {
+  idx--;
+  if (idx < 0) {
+    idx = testimonials.length - 1;
+  }
+  updateTestimonial();
 }
