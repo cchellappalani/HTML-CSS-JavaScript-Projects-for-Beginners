@@ -34,6 +34,22 @@ body {
   width: 100%;
 }
 
+.image-wrapper {
+  position: relative;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
 .btn-container {
   position: relative;
   width: 80%;
