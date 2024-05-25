@@ -9,7 +9,7 @@ btnEl.addEventListener("click", async function () {
     btnEl.innerText = "Loading...";
     amineNameEl.innerText = "Updating...";
     animeImgEl.src = "spinner.svg";
-    const response = await fetch("https://api.catboys.com/img");
+    const response = await fetch("https://nekos.life/api/v2/img/neko");
     const data = await response.json();
     btnEl.disabled = false;
     btnEl.innerText = "Get Anime";
