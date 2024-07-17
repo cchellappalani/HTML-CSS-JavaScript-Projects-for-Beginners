@@ -17,6 +17,7 @@ function updateTimer() {
 }
 
 function startTimer() {
+  startEl.disabled = true;
   interval = setInterval(() => {
     timeLeft--;
     updateTimer();
@@ -29,9 +30,12 @@ function startTimer() {
   }, 1000);
 }
 function stopTimer() {
+  startEl.disabled = false;
   clearInterval(interval);
+
 }
 function resetTimer() {
+  startEl.disabled = false;
   clearInterval(interval);
   timeLeft = 1500;
   updateTimer();
