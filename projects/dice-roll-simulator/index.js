@@ -1,7 +1,6 @@
 const buttonEl = document.getElementById("roll-button");
-
+const resetButtonEl = document.getElementById("reset-button");
 const diceEl = document.getElementById("dice");
-
 const rollHistoryEl = document.getElementById("roll-history");
 
 let historyList = [];
@@ -50,4 +49,10 @@ buttonEl.addEventListener("click", () => {
     diceEl.classList.remove("roll-animation");
     rollDice();
   }, 1000);
+});
+
+resetButtonEl.addEventListener("click", () => {
+  historyList = [];
+  rollHistoryEl.innerHTML = "";
+  diceEl.innerHTML = "&#9860;"; // Reset the dice face to the default
 });
