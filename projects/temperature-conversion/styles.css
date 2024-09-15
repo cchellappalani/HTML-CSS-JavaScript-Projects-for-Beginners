@@ -1,0 +1,53 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(to left, lightblue, lightpink, lightgreen );
+    margin-top: 50px;
+
+}
+h1{
+    color: black;
+}
+form{
+    box-shadow: 0px 10px 10px 6px rgb(74, 71, 71);
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+    padding: 25px;   
+}
+#textBox{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    font-size: 2em;
+    border: 1.5px solid rgb(113, 108, 108);
+    margin-bottom: 20px;
+    color: rgb(82, 80, 80);
+    border-radius: 10px;
+}
+.radio{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: .2rem;
+}
+button{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0.4rem;
+    margin-top: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    border-color: rgb(160, 152, 152);
+    border-width: 1px;
+}
+button:hover{
+    background-color: rgb(206, 206, 205);
+    transition: 0.2s ease;
+}
+#result{
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
