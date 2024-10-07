@@ -1,26 +1,27 @@
-const API_KEY = "275d58779ccf4e22af03e792e8819fff";
+const API_KEY = "cf4b2745d2b64605bd47a2d231b6dcf7";  // Replace with your valid API key
 const recipeListEl = document.getElementById("recipe-list");
 
 function displayRecipes(recipes) {
-  recipeListEl.innerHTML = "";
+  recipeListEl.innerHTML = "";  // Clear any existing content, including "Loading recipes..."
   recipes.forEach((recipe) => {
     const recipeItemEl = document.createElement("li");
     recipeItemEl.classList.add("recipe-item");
-    recipeImageEl = document.createElement("img");
-    recipeImageEl.src = recipe.image;
-    recipeImageEl.alt = "recipe image";
 
-    recipeTitleEl = document.createElement("h2");
+    const recipeImageEl = document.createElement("img");
+    recipeImageEl.src = recipe.image;
+    recipeImageEl.alt = `${recipe.title} image`;
+
+    const recipeTitleEl = document.createElement("h2");
     recipeTitleEl.innerText = recipe.title;
 
-    recipeIngredientsEl = document.createElement("p");
+    const recipeIngredientsEl = document.createElement("p");
     recipeIngredientsEl.innerHTML = `
         <strong>Ingredients:</strong> ${recipe.extendedIngredients
           .map((ingredient) => ingredient.original)
           .join(", ")}
     `;
 
-    recipeLinkEl = document.createElement("a");
+    const recipeLinkEl = document.createElement("a");
     recipeLinkEl.href = recipe.sourceUrl;
     recipeLinkEl.innerText = "View Recipe";
 
@@ -33,18 +34,28 @@ function displayRecipes(recipes) {
 }
 
 async function getRecipes() {
-  const response = await fetch(
-    `https://api.spoonacular.com/recipes/random?number=10&apiKey=${API_KEY}`
-  );
+  try {
+    const response = await fetch(
+      `https://api.spoonacular.com/recipes/random?number=10&apiKey=${API_KEY}`
+    );
 
-  const data = await response.json();
+    if (!response.ok) {
+      throw new Error("Failed to fetch recipes");
+    }
 
-  return data.recipes;
+    const data = await response.json();
+    return data.recipes;
+  } catch (error) {
+    console.error(error);
+    recipeListEl.innerHTML = `<li>Error fetching recipes. Please try again later.</li>`;
+  }
 }
 
 async function init() {
   const recipes = await getRecipes();
-  displayRecipes(recipes);
+  if (recipes) {
+    displayRecipes(recipes);
+  }
 }
 
 init();
