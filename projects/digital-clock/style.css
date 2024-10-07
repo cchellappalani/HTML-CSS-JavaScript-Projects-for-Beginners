@@ -21,11 +21,16 @@ h2 {
 
 .clock {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Add spacing between each clock unit */
 }
 
 .clock div {
-  margin: 5px;
   position: relative;
+  display: flex;
+  flex-direction: column; /* Ensures each unit stacks vertically */
+  align-items: center; /* Aligns text horizontally */
 }
 
 .clock span {
@@ -42,12 +47,14 @@ h2 {
 }
 
 .clock .text {
+  width: 100%; /* Ensures it matches the span width */
   height: 30px;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
   background: darkblue;
   opacity: 0.8;
+  text-align: center; /* Centers the label text */
 }
 
 .clock #ampm {
