@@ -8,6 +8,10 @@ function calculateAge() {
     alert("Please enter your birthday");
   } else {
     const age = getAge(birthdayValue);
+    if (age < 0) {
+      alert("please select a valid date");
+      return;//if age is less than 0 then alert the user to select a valid date
+    }
     resultEl.innerText = `Your age is ${age} ${age > 1 ? "years" : "year"} old`;
   }
 }
