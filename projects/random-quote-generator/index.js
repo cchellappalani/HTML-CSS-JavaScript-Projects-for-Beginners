@@ -2,7 +2,20 @@ const btnEl = document.getElementById("btn");
 const quoteEl = document.getElementById("quote");
 const authorEl = document.getElementById("author");
 
-const apiURL = "https://api.quotable.io/random";
+const apiURL = [
+  {
+    content:"Hello brother",
+    author:"Rabee"
+  },
+  {
+    content:"Do your best",
+    author:"Leo"
+  },
+  {
+    content:"Help people now",
+    author:"Joe"
+  }
+]
 
 async function getQuote() {
   try {
