@@ -1,0 +1,112 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #f0f8ff, #e1f5fe, #f3e5f5, #ede7f6);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px;
+  transition: background-color 1s ease, color 0.3s;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+.quote-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#quote {
+  font-size: 20px;
+  min-height: 60px;
+  color: #444;
+}
+
+.author {
+  margin-top: 10px;
+  font-style: italic;
+  color: #777;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.dark {
+  background-color: #121212;
+  color: white;
+}
+
+.dark .quote-box {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark #quote,
+.dark .author {
+  color: #ddd;
+}
+
+.dark button {
+  background-color: #444;
+}
+
+.dark button:hover {
+  background-color: #666;
+}
+
+.hidden {
+  display: none;
+}
+
+#favoritesContainer {
+  margin-top: 30px;
+  text-align: left;
+}
+
+#favoritesList {
+  list-style: none;
+  padding: 0;
+}
+
+#favoritesList li {
+  margin: 5px 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}

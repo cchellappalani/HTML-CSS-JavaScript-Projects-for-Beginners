@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultimate Quote Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quote-box">
+    <h1>💬 Daily Motivation</h1>
+    <p id="quote">Click the button below to get today's quote.</p>
+    <p id="author" class="author"></p>
+
+    <div class="buttons">
+      <button onclick="generateQuote()">🔁 New Quote</button>
+      <button onclick="copyQuote()">📋 Copy</button>
+      <button onclick="shareQuote()">🐦 Share</button>
+      <button onclick="saveFavorite()">💖 Save</button>
+      <button onclick="viewFavorites()">📚 View Saved</button>
+      <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </div>
+
+    <div id="favoritesContainer" class="hidden">
+      <h3>Saved Quotes</h3>
+      <ul id="favoritesList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
